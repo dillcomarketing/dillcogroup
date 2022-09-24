@@ -61,7 +61,7 @@ $brands = ['/assets/images/index/dci.png', '/assets/images/index/fck.png', '/ass
     <main class="mx-auto max-w-screen-xlscreen py-2">
         <div class="mx-6">
 
-            <section id="banners" class="mb-4 md:mb-8">
+            <section id="banners" class="mb-4 md:mb-8 -mx-2 sm:mx-0">
                 <x-embla-images :images="$banners" classes='embla--master-view'>
                     <button class="embla__prev-button absolute left-5 ml-2 top-45">
                         <x-icons.prev size="24" fill='white' />

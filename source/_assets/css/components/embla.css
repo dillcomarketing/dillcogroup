@@ -26,7 +26,13 @@
 }
 
 .embla--master-view .embla__slide--active {
-    flex: 0 0 90%;
+    flex: 0 0 110%;
+}
+
+@screen sm {
+    .embla--master-view .embla__slide--active {
+        flex: 0 0 90%;
+    }        
 }
 
 .embla--master-view .embla__slide__img {
