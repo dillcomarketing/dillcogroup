@@ -1,0 +1,52 @@
+.embla {
+    @apply overflow-hidden relative;
+}
+
+.embla__container {
+    @apply flex items-center my-6;
+}
+
+.embla__viewport {
+    @apply hidden w-full;
+}
+
+.embla__slide {
+    opacity: .7;
+    transition: opacity .5s, box-shadow .5s;
+}
+
+.embla__slide--active {
+    opacity: 1;
+}
+
+.embla--master-view .embla__slide {
+    flex: 0 0 50%;
+    position: relative;
+    min-width: 80%;
+}
+
+.embla--master-view .embla__slide--active {
+    flex: 0 0 90%;
+}
+
+.embla--master-view .embla__slide__img {
+    @apply shadow-sm;
+}
+
+.embla--master-view .embla__slide--active .embla__slide__img {
+    @apply rounded;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.embla__dot-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.embla__dot-button--active {
+    background-color: #fff;
+}

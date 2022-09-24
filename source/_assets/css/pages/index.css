@@ -1,0 +1,22 @@
+.bg-pa-fadil {
+    background-image: url('/assets/images/index/foto-pa-fadil.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+}
+
+#brands .embla__slide {
+    flex: 0 0 30%;
+}
+
+@screen sm {
+    #brands .embla__slide {
+        flex: 0 0 25%;
+    }
+}
+
+@screen lg {
+    #brands .embla__slide {
+        flex: 0 0 20%;
+    }
+}
