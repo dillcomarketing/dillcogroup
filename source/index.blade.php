@@ -105,7 +105,7 @@ $brands = ['/assets/images/index/dci.png', '/assets/images/index/fck.png', '/ass
             </section>
 
             <section id="brands" class="mt-8 lg:mt-32 mb-8">
-                <x-embla-images :images="$brands" />
+                <x-embla-images :images="$brands" slideClasses="mx-1" />
             </section>
 
             <section id="join-us" class="mb-8">
