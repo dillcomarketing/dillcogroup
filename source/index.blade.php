@@ -3,15 +3,16 @@
 $menus = [
     [ 'title' => 'home', 'link' => '/', 'active' => true ],
     [ 'title' => 'about', 'link' => '#about' ],
-    [ 'title' => 'brands', 'link' => '#brands' ],
-    [ 'title' => 'catalog', 'link' => '#brands' ],
+    [ 'title' => 'brands', 'link' => '#homepage-brand-slider' ],
+    [ 'title' => 'catalog', 'link' => '#homepage-brand-slider' ],
     [ 'title' => 'contact', 'link' => '#contact' ],
 ];
 
 $banners = [
     '/assets/images/banners/banner-dilltea.png',
     '/assets/images/banners/banner-dci.png',
-    '/assets/images/banners/banner-flavorich.png'
+    '/assets/images/banners/banner-flavorich.png',
+    '/assets/images/banners/banner-fine-choco-resized.png',
 ];
 
 $brands = [
@@ -31,7 +32,7 @@ $brands = [
 
     {{-- header --}}
     <header class="flex items-center p-2 px-4 lg:px-8">
-        <x-social-media-menu />
+        <x-social-media-menu listClasses="mr-2" />
         <div class="flex-1 text-center">
             <a href="/" class="inline-block text-xl font-semibold hover:opacity-70">
                 <h1 title="Dillco Group">
@@ -62,7 +63,7 @@ $brands = [
         <div class="mx-6">
 
             {{-- banner slider --}}
-            <section id="banners" class="mb-4 md:mb-8 -mx-2 sm:mx-0">
+            <section id="product-banner-slider" class="mb-4 md:mb-8 -mx-2 sm:mx-0">
                 <x-embla-images :images="$banners" classes='embla--master-view'>
                     <button class="embla__prev-button absolute left-5 ml-2 top-45">
                         <x-icons.prev size="24" fill='white' />
@@ -106,7 +107,7 @@ $brands = [
             </section>
 
             {{-- brand slider --}}
-            <section id="brands" class="mt-8 lg:mt-32 mb-8">
+            <section id="homepage-brand-slider" class="mt-8 lg:mt-32 mb-8">
                 <x-embla-images :images="$brands" slideClasses="mx-1" />
             </section>
         </div>
