@@ -1,9 +1,9 @@
 @php
 
 $banners = [
-    '/assets/images/index/fine-choco-banner-1000g.png',
-    '/assets/images/index/fine-choco-banner-1000g.png',
-    '/assets/images/index/fine-choco-banner-1000g.png'
+    '/assets/images/banners/banner-fine-choco-1000g.png',
+    '/assets/images/banners/banner-fine-choco-1000g.png',
+    '/assets/images/banners/banner-fine-choco-1000g.png',
 ];
 
 $bestSellers = [
@@ -129,8 +129,10 @@ $lineups = [
                         </h4>
                         @php
                             $images = [];
-                            for ($i = 0; $i < $lineup['count']; $i++) {
-                                array_push($images, '/assets/images/dillco-chocolate/lineup-' . $lineup['prefix'] . ($i + 1) . '.png');
+                            while (count($images) < 6) {
+                                for ($i = 0; $i < $lineup['count']; $i++) {
+                                    array_push($images, '/assets/images/dillco-chocolate/lineup-' . $lineup['prefix'] . ($i + 1) . '.png');
+                                }
                             }
                         @endphp
                         <div id="{{ 'lineup-slider-' . $lineup['prefix'] }}">

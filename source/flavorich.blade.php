@@ -1,6 +1,10 @@
 @php
 
-$banners = ['/assets/images/index/banner-flavorich.png', '/assets/images/index/banner-flavorich.png', '/assets/images/index/banner-flavorich.png'];
+$banners = [
+    '/assets/images/banners/banner-flavorich.png',
+    '/assets/images/banners/banner-flavorich.png',
+    '/assets/images/banners/banner-flavorich.png'
+];
 
 $best_sellers = [
     'syrups' => [
@@ -9,19 +13,19 @@ $best_sellers = [
             [
                 'label' => 'Premium Puree Syrup',
                 'title' => 'Lychee',
-                'image' => '/assets/images/flavorich/lychee.png',
+                'image' => '/assets/images/flavorich/best-seller-lychee.png',
                 'description' => 'Manisnya eksotis yang cocok untuk minuman sehari-hari Anda, Manis dan segarnya buah leci akan menghadirkan kesegaran di minuman pilihan Anda.',
             ],
             [
                 'label' => 'Premium Puree Syrup',
                 'title' => 'Strawberry',
-                'image' => '/assets/images/flavorich/strawberry.png',
+                'image' => '/assets/images/flavorich/best-seller-strawberry.png',
                 'description' => 'Manis dan asam dari sirup stroberi yang baru dipanen yang dirancang untuk bar Anda. Mixer yang sempurna untuk membuat berbagai minuman dan makanan.',
             ],
             [
                 'label' => 'Premium Syrup',
                 'title' => 'Vanilla',
-                'image' => '/assets/images/flavorich/vanilla.png',
+                'image' => '/assets/images/flavorich/best-seller-vanilla.png',
                 'description' => 'Menghadirkan rasa vanilla lokal khusus untuk latte dan kopi, rasa lembut dan tajam yang meningkatkan rasa manis untuk minuman favorit Anda.',
             ],
         ],
@@ -32,19 +36,19 @@ $best_sellers = [
             [
                 'label' => 'Premium Beverage Powder',
                 'title' => 'Red Velvet',
-                'image' => '/assets/images/flavorich/red-velvet.png',
+                'image' => '/assets/images/flavorich/best-seller-red-velvet.png',
                 'description' => 'Serbuk minuman yang mengandung bubuk cokelat dan ekstrak raspberry. Sehingga memiliki karakter warna seperti red velvet cake dengan cita rasa cake raspberry yang lembut, manis dan creamy.',
             ],
             [
                 'label' => 'Premium Beverage Powder',
                 'title' => 'Green Tea',
-                'image' => '/assets/images/flavorich/green-tea.png',
+                'image' => '/assets/images/flavorich/best-seller-green-tea.png',
                 'description' => 'Serbuk minuman yang mengandung bubuk teh hijau jenis asamica. Sehingga memiliki karakter warna seperti teh hijau dengan cita rasa yang pahit agak sepat, manis dan creamy.',
             ],
             [
                 'label' => 'Premium Beverage Powder',
                 'title' => 'Taro',
-                'image' => '/assets/images/flavorich/taro.png',
+                'image' => '/assets/images/flavorich/best-seller-taro.png',
                 'description' => 'Serbuk minuman yang mengandung bubuk teh hijau jenis asamica. Sehingga memiliki karakter warna seperti teh hijau dengan cita rasa yang pahit agak sepat, manis dan creamy.',
             ],
         ],

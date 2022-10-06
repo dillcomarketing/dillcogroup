@@ -1,9 +1,9 @@
 @php
 
 $banners = [
-    '/assets/images/index/banner-dilltea.png',
-    '/assets/images/index/banner-dilltea.png',
-    '/assets/images/index/banner-dilltea.png'
+    '/assets/images/banners/banner-dilltea.png',
+    '/assets/images/banners/banner-dilltea.png',
+    '/assets/images/banners/banner-dilltea.png'
 ];
 
 $lineups = [
@@ -89,9 +89,9 @@ $lineups = [
                         </h4>
                         @php
                             $images = [];
-                            for ($i = 0; $i < 2; $i++) { 
-                                for ($y = 0; $y < $lineup['count']; $y++) {
-                                    array_push($images, '/assets/images/dilltea/lineup-' . $lineup['prefix'] . ($y + 1) . '.png');
+                            while (count($images) < 6) {
+                                for ($i = 0; $i < $lineup['count']; $i++) {
+                                    array_push($images, '/assets/images/dilltea/lineup-' . $lineup['prefix'] . ($i + 1) . '.png');
                                 }
                             }
                         @endphp

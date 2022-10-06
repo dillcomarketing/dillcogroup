@@ -9,18 +9,18 @@ $menus = [
 ];
 
 $banners = [
-    '/assets/images/index/banner-dilltea.png',
-    '/assets/images/index/banner-dci.png',
-    '/assets/images/index/banner-flavorich.png'
+    '/assets/images/banners/banner-dilltea.png',
+    '/assets/images/banners/banner-dci.png',
+    '/assets/images/banners/banner-flavorich.png'
 ];
 
 $brands = [
-    '/assets/images/index/dci.png',
-    '/assets/images/index/fck.png',
-    '/assets/images/index/dilltea.png',
-    '/assets/images/index/kopsil.png',
-    '/assets/images/index/palmrich.png',
-    '/assets/images/index/gmn.png'
+    '/assets/images/brands/brand-dci.png',
+    '/assets/images/brands/brand-flavorich.png',
+    '/assets/images/brands/brand-dilltea.png',
+    '/assets/images/brands/brand-kopsil.png',
+    '/assets/images/brands/brand-palmrich.png',
+    '/assets/images/brands/brand-gmn.png'
 ];
 
 @endphp
