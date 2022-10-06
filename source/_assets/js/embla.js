@@ -6,7 +6,7 @@ function initEmbla(parentElementSelector, options) {
     const parent = document.querySelector(parentElementSelector);
 
     if (!parent) {
-        throw 'parent element not found';
+        return;
     }
 
     const slideElements = parent.querySelectorAll('.embla__slide');

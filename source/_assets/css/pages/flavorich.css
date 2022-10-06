@@ -1,0 +1,18 @@
+#lineup-slider-beverage .embla__slide,
+#lineup-slider-syrup .embla__slide {
+    flex: 0 0 40%;
+}
+
+@screen sm {
+    #lineup-slider-beverage .embla__slide,
+    #lineup-slider-syrup .embla__slide {
+        flex: 0 0 25%;
+    }
+}
+
+@screen lg {
+    #lineup-slider-beverage .embla__slide,
+    #lineup-slider-syrup .embla__slide {
+        flex: 0 0 20%;
+    }
+}
