@@ -11,7 +11,8 @@ module.exports = {
             'md': '768px',
             'lg': '992px',
             'xl': '1200px',
-            'xlscreen': '1280px',
+            'xl-720': '1280px',
+            'xl-768': '1366px',
         },
         fontFamily: {
             'sans': ['Montserrat', 'sans-serif'],
@@ -31,13 +32,7 @@ module.exports = {
         },
         extend: {
             colors: {
-                'primary': '#5271ff',
-                'secondary': '#657389',
-                'warning': '#ffda81',
-                'error': '#eb6b6b',
-                'info': '#329f99',
-                'light': '#f5f6f8',
-                'dark': '#3a424e'
+                'flavorich': '#16124b'
             },
             spacing: {
                 '56': '14rem',
@@ -69,6 +64,12 @@ module.exports = {
                 '90': '90%',
                 '95': '95%',
                 '100': '100%',
+            },
+            fontSize: {
+                '7xl': '5rem',
+                '8xl': '6rem',
+                '9xl': '7rem',
+                '10xl': '8rem',
             },
         },
     },

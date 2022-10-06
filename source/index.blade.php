@@ -58,7 +58,7 @@ $brands = ['/assets/images/index/dci.png', '/assets/images/index/fck.png', '/ass
         </ul>
     </nav>
 
-    <main class="mx-auto max-w-screen-xlscreen py-2">
+    <main class="mx-auto max-w-screen-xl-768 py-2">
         <div class="mx-6">
 
             <section id="banners" class="mb-4 md:mb-8 -mx-2 sm:mx-0">
