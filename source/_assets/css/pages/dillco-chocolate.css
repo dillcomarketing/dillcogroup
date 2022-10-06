@@ -1,0 +1,21 @@
+#lineup-slider-classic-series .embla__slide,
+#lineup-slider-fine-choco-series .embla__slide,
+#lineup-slider-3in1-series .embla__slide {
+    flex: 0 0 40%;
+}
+
+@screen sm {
+    #lineup-slider-classic-series .embla__slide,
+    #lineup-slider-fine-choco-series .embla__slide,
+    #lineup-slider-3in1-series .embla__slide {
+        flex: 0 0 25%;
+    }
+}
+
+@screen lg {
+    #lineup-slider-classic-series .embla__slide,
+    #lineup-slider-fine-choco-series .embla__slide,
+    #lineup-slider-3in1-series .embla__slide {
+        flex: 0 0 20%;
+    }
+}

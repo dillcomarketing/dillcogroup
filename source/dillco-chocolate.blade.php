@@ -1,66 +1,47 @@
 @php
 
-$banners = ['/assets/images/index/banner-flavorich.png', '/assets/images/index/banner-flavorich.png', '/assets/images/index/banner-flavorich.png'];
+$banners = [
+    '/assets/images/index/fine-choco-banner-1000g.png',
+    '/assets/images/index/fine-choco-banner-1000g.png',
+    '/assets/images/index/fine-choco-banner-1000g.png'
+];
 
-$best_sellers = [
-    'syrups' => [
-        'title' => 'Premium Puree Syrup',
-        'values' => [
-            [
-                'label' => 'Premium Puree Syrup',
-                'title' => 'Lychee',
-                'image' => '/assets/images/flavorich/lychee.png',
-                'description' => 'Manisnya eksotis yang cocok untuk minuman sehari-hari Anda, Manis dan segarnya buah leci akan menghadirkan kesegaran di minuman pilihan Anda.',
-            ],
-            [
-                'label' => 'Premium Puree Syrup',
-                'title' => 'Strawberry',
-                'image' => '/assets/images/flavorich/strawberry.png',
-                'description' => 'Manis dan asam dari sirup stroberi yang baru dipanen yang dirancang untuk bar Anda. Mixer yang sempurna untuk membuat berbagai minuman dan makanan.',
-            ],
-            [
-                'label' => 'Premium Syrup',
-                'title' => 'Vanilla',
-                'image' => '/assets/images/flavorich/vanilla.png',
-                'description' => 'Menghadirkan rasa vanilla lokal khusus untuk latte dan kopi, rasa lembut dan tajam yang meningkatkan rasa manis untuk minuman favorit Anda.',
-            ],
-        ],
+$bestSellers = [
+    [
+        'label' => 'The 3in1 Series',
+        'title' => 'Bali Kamarasa',
+        'image' => '/assets/images/dillco-chocolate/best-seller-bali.png',
+        'description' => 'Minuman coklat siap seduh berbahan dasar SPECIALTY CHOCOLATE  dari daratan BALI yang memiliki sensasi rasa agak asam memberi- kan efek rasa cokelat yang light dan nutty.',
     ],
-    'beverages' => [
-        'title' => 'Premium Beverage Powders',
-        'values' => [
-            [
-                'label' => 'Premium Beverage Powder',
-                'title' => 'Red Velvet',
-                'image' => '/assets/images/flavorich/red-velvet.png',
-                'description' => 'Serbuk minuman yang mengandung bubuk cokelat dan ekstrak raspberry. Sehingga memiliki karakter warna seperti red velvet cake dengan cita rasa cake raspberry yang lembut, manis dan creamy.',
-            ],
-            [
-                'label' => 'Premium Beverage Powder',
-                'title' => 'Green Tea',
-                'image' => '/assets/images/flavorich/green-tea.png',
-                'description' => 'Serbuk minuman yang mengandung bubuk teh hijau jenis asamica. Sehingga memiliki karakter warna seperti teh hijau dengan cita rasa yang pahit agak sepat, manis dan creamy.',
-            ],
-            [
-                'label' => 'Premium Beverage Powder',
-                'title' => 'Taro',
-                'image' => '/assets/images/flavorich/taro.png',
-                'description' => 'Serbuk minuman yang mengandung bubuk teh hijau jenis asamica. Sehingga memiliki karakter warna seperti teh hijau dengan cita rasa yang pahit agak sepat, manis dan creamy.',
-            ],
-        ],
+    [
+        'label' => 'The Fine Choco Series',
+        'title' => 'Aceh Kuala Raja',
+        'image' => '/assets/images/dillco-chocolate/best-seller-aceh.png',
+        'description' => 'Perpaduan nougat yang manis dan lembut memberikan rasa cokelat yang unik dengan light taste dari buah blue berry.',
+    ],
+    [
+        'label' => 'The 3in1 Series',
+        'title' => 'Java Srawana',
+        'image' => '/assets/images/dillco-chocolate/best-seller-java.png',
+        'description' => 'Minuman coklat siap seduh berbahan dasar SPECIALTY CHOCOLATE dari daratan Jawa yang memiliki sensasi rasa agak asam memberikan efek rasa cokelat yang pahit tapi tetap manis serta rasa buah berry.',
     ],
 ];
 
 $lineups = [
     [
-        'title' => 'Premium Beverage Powder',
-        'prefix' => 'beverage',
-        'count' => 13,
+        'title' => 'The Classic Series',
+        'prefix' => 'classic-series',
+        'count' => 4,
     ],
     [
-        'title' => 'Premium Puree Syrup',
-        'prefix' => 'syrup',
-        'count' => 10,
+        'title' => 'Fine Choco Series',
+        'prefix' => 'fine-choco-series',
+        'count' => 4,
+    ],
+    [
+        'title' => 'The 3in1 Series',
+        'prefix' => '3in1-series',
+        'count' => 4,
     ],
 ];
 
@@ -69,15 +50,15 @@ $lineups = [
 @extends('_layouts.blank')
 
 @section('body')
-    <header class="py-5 px-4 lg:px-8">
+    <header class="py-5 px-4 lg:px-8 border-b border-black">
         <ul role="navigation" class="flex flex-wrap items-center justify-between uppercase text-sm font-semibold">
             <li class="w-full sm:w-auto flex sm:block flex-col items-center mb-6 sm:mb-0">
-                <a href="#" class="inline-block" title="Flavorich">
-                    <h1 class="hidden">Flavorich</h1>
-                    <img src="/assets/images/flavorich/flavorich.png" class="w-24 sm:w-20" />
+                <a href="#" class="inline-block" title="Dillco Chocolate">
+                    <h1 class="hidden">Dillco Chocolate</h1>
+                    <img src="/assets/images/dillco-chocolate/dillco-chocolate.png" class="w-10 sm:w-12" />
                 </a>
             </li>
-            <li class="border-b-2 border-flavorich hover:opacity-70">
+            <li class="border-b-2 border-orange-500 hover:opacity-70">
                 <a href="#" class="block">Home</a>
             </li>
             <li class="border-b-2 border-transparent hover:opacity-70">
@@ -97,11 +78,11 @@ $lineups = [
         </ul>
     </header>
 
-    <main class="bg-flavorich text-white py-4 sm">
+    <main class="bg-orange-500 text-white py-4 sm">
 
         {{-- banners --}}
-        <section id="flavorich-banners" class="max-w-screen-xl-720 mx-auto px-6 sm:px-8 mb-4">
-            <x-embla-images :images="$banners" classes='embla--master-view'>
+        <section id="dillco-chocolate-banners" class="max-w-screen-md mx-auto px-6 mb-4">
+            <x-embla-images :images="$banners" classes='embla--master-view' imageClasses="max-h-72">
                 <button class="embla__prev-button absolute left-5 ml-2 top-45">
                     <x-icons.prev size="24" fill='white' />
                 </button>
@@ -117,36 +98,28 @@ $lineups = [
         </section>
 
         {{-- best sellers --}}
-        <section id="flavorich-best-seller" class="max-w-screen-xl-768 mb-4 px-6 lg:mx-auto">
+        <section id="flavorich-best-seller" class=" max-w-screen-md mb-4 px-6 lg:mx-auto">
             <h2 class="uppercase text-4xl font-bold tracking-wide mb-6 text-center">Best Seller</h2>
-            <div class="flex flex-col md:flex-row">
-                @php $separate = true; @endphp
-                @foreach ($best_sellers as $best_seller)
-                    <div class="my-4 md:my-0 flex-1">
-                        <h3 class="uppercase font-semibold text-xl mb-4 md:mb-8">{{ $best_seller['title'] }}</h3>
-                        @foreach ($best_seller['values'] as $value)
-                            <div class="flex items-center md:items-start my-8 md:my-0 h-auto md:h-56">
-                                <div class="bg-white rounded-full flex-none w-24 mr-4">
-                                    <img src="{{ $value['image'] }}" alt="{{ $value['image'] }}">
-                                </div>
-                                <div>
-                                    <h4 class="uppercase text-xs font-semibold">{{ $value['label'] }}</h4>
-                                    <h5 class="uppercase text-xl font-semibold mb-2">{{ $value['title'] }}</h5>
-                                    <p class="text-xs xl:text-sm text-justify">{{ $value['description'] }}</p>
-                                </div>
+            <div>
+                @foreach ($bestSellers as $bestSeller)
+                    <div class="py-6">
+                        <div class="flex items-center">
+                            <div class="flex-none w-24 md:w-32 mr-4">
+                                <img class="rounded-full" src="{{ $bestSeller['image'] }}" alt="{{ $bestSeller['image'] }}">
                             </div>
-                        @endforeach
+                            <div>
+                                <h4 class="uppercase text-sm font-semibold">{{ $bestSeller['label'] }}</h4>
+                                <h2 class="uppercase text-2xl md:text-4xl font-semibold mb-2">{{ $bestSeller['title'] }}</h2>
+                                <p class="text-sm text-justify">{{ $bestSeller['description'] }}</p>
+                            </div>
+                        </div>
                     </div>
-                    @if ($separate)
-                        <div class="w-1 bg-gray-600 mx-12 mb-12 hidden md:block"></div>
-                    @endif
-                    @php $separate = false @endphp
                 @endforeach
             </div>
         </section>
 
         {{-- line up --}}
-        <section id="flavorich-line-up" class="max-w-screen-xl-768 mb-8 lg:mb-16 px-6 lg:mx-auto">
+        <section id="dillco-chocolate-lineup" class="max-w-screen-xl-768 mb-8 lg:mb-16 px-6 lg:mx-auto">
             <h3 class="uppercase text-xl font-semibold mb-4">Our Line Up</h3>
             @foreach ($lineups as $lineup)
                 <div class="border border-gray-200">
@@ -157,7 +130,7 @@ $lineups = [
                         @php
                             $images = [];
                             for ($i = 0; $i < $lineup['count']; $i++) {
-                                array_push($images, '/assets/images/flavorich/lineup-' . $lineup['prefix'] . ($i + 1) . '.png');
+                                array_push($images, '/assets/images/dillco-chocolate/lineup-' . $lineup['prefix'] . ($i + 1) . '.png');
                             }
                         @endphp
                         <div id="{{ 'lineup-slider-' . $lineup['prefix'] }}">
@@ -173,7 +146,7 @@ $lineups = [
         </section>
 
         {{-- recipes --}}
-        <section id="flavorich-recipes" class="max-w-screen-xl-768 mx-auto px-6">
+        <section id="dillco-chocolate-recipes" class="max-w-screen-xl-768 mx-auto px-6">
             <div class="flex flex-col lg:flex-row mb-2">
                 <div class="mb-4 lg:mr-10">
                     <h2 class="text-6xl md:text-8xl uppercase font-bold tracking-wide leading-none mb-4">Recipes</h2>
@@ -199,12 +172,12 @@ $lineups = [
                         tate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero.
                     </p>
                 </div>
-                <x-video-thumb size='large' buttonClasses="bg-flavorich" />
+                <x-video-thumb size='large' buttonClasses="bg-orange-500" />
             </div>
             <div class="flex overflow-x-auto -mx-4 justify-between py-6">
                 @for ($i = 0; $i < 4; $i++)
                     <div class="m-4">
-                        <x-video-thumb buttonClasses="bg-flavorich" />
+                        <x-video-thumb buttonClasses="bg-orange-500" />
                     </div>
                 @endfor
             </div>
