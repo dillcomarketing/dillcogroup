@@ -18,11 +18,6 @@ $brands = ['/assets/images/index/dci.png', '/assets/images/index/fck.png', '/ass
                     <x-icons.instagram size="18" />
                 </a>
             </li>
-            <li class="hover:opacity-70">
-                <a href="#">
-                    <x-icons.facebook size="18" />
-                </a>
-            </li>
         </ul>
         <div class="flex-1 text-center">
             <a href="#" class="inline-block text-xl font-semibold hover:opacity-70">
@@ -122,11 +117,6 @@ $brands = ['/assets/images/index/dci.png', '/assets/images/index/fck.png', '/ass
                     <li class="mr-3 hover:opacity-70">
                         <a href="#">
                             <x-icons.instagram size="32" />
-                        </a>
-                    </li>
-                    <li class="hover:opacity-70">
-                        <a href="#">
-                            <x-icons.facebook size="32" />
                         </a>
                     </li>
                 </ul>
