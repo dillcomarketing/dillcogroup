@@ -32,7 +32,8 @@ module.exports = {
         },
         extend: {
             colors: {
-                'flavorich': '#16124b'
+                'flavorich': '#16124b',
+                'dilltea': '#c9ae3f'
             },
             spacing: {
                 '56': '14rem',
