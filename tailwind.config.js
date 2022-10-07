@@ -1,8 +1,20 @@
 module.exports = {
-    purge: [
-        './source/**/*.blade.php',
-        './assets/**/*.js'
-    ],
+    purge: {
+        content: [
+            './source/**/*.blade.php',
+            './assets/**/*.js'
+        ],
+        options: {
+            whitelist: [
+                'border-orange-500',
+                'border-flavorich',
+                'border-dilltea',
+                'hover:border-orange-500',
+                'hover:border-flavorich',
+                'hover:border-dilltea',
+            ],
+        }
+    },
     darkMode: false,
     theme: {
         screens: {
