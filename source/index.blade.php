@@ -9,10 +9,21 @@ $menus = [
 ];
 
 $banners = [
-    '/assets/images/banners/banner-dilltea.png',
-    '/assets/images/banners/banner-dci.png',
-    '/assets/images/banners/banner-flavorich.png',
-    '/assets/images/banners/banner-fine-choco-resized.png',
+    [
+        'link' => '/dilltea',
+        'title' => 'Dilltea',
+        'src' => '/assets/images/banners/banner-dilltea.png'
+    ],
+    [
+        'link' => '/dillco-chocolate',
+        'title' => 'Dillco Chocolate',
+        'src' => '/assets/images/banners/banner-dci.png'
+    ],
+    [
+        'link' => '/flavorich',
+        'title' => 'Flavorich',
+        'src' => '/assets/images/banners/banner-flavorich.png'
+    ],
 ];
 
 $brands = [

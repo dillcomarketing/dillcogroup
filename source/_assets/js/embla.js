@@ -41,6 +41,15 @@ function initEmbla(parentElementSelector, options) {
             embla.reInit();
         });
 
+        embla.slideNodes().forEach(node => {
+            node.addEventListener('click', e => {
+                e.preventDefault();
+                if (embla.clickAllowed() && e.currentTarget.querySelector('a')) {
+                    window.location.href = e.currentTarget.querySelector('a').getAttribute('href');
+                }
+            }, false);
+        });
+
         // handle next/prev button
         prevButton?.addEventListener('click', embla.scrollPrev);
         nextButton?.addEventListener('click', embla.scrollNext);
