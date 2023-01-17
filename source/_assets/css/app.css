@@ -5,12 +5,18 @@
 @import 'tailwindcss/utilities';
 
 @import 'components/embla.css';
+@import 'components/header.css';
+@import 'components/general.css';
 
 .bg-pa-fadil {
     background-image: url('/assets/images/foto-pa-fadil.png');
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto 100%;
+}
+
+body {
+  @apply text-gray-900 font-sans antialiased
 }
 
 #brands .embla__slide {

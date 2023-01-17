@@ -56,3 +56,81 @@
 .embla__dot-button--active {
     background-color: #fff;
 }
+
+button.embla__nav-button {
+  fill: #000000;
+}
+
+button.embla__nav-button:disabled svg {
+  fill: #cccccc;
+  cursor: not-allowed;
+}
+
+#homepage-banner-slider button.embla__prev-button {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+  z-index: -1;
+}
+
+#homepage-banner-slider .embla-dots {
+  opacity: 0;
+  bottom: 8px;
+  transition: all 0.5s linear;
+  z-index: -1;
+}
+
+#homepage-banner-slider button.embla__next-button {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s linear;
+  z-index: -1;
+}
+
+#homepage-banner-slider:hover button.embla__nav-button {
+  opacity: 1;
+  z-index: 1;
+  transform: translateX(0);
+}
+
+#homepage-banner-slider:hover .embla-dots {
+  bottom: -24px;
+  z-index: 1;
+  opacity: 1;
+}
+
+#homepage-banner-slider .embla__dot-selected {
+  background-color: #000;
+}
+
+#homepage-brand-slider .slider__item {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+@screen sm {
+  #homepage-brand-slider .slider__item {
+    flex: 0 0 50%;
+  }
+}
+
+@screen md {
+  #homepage-brand-slider .slider__item {
+      flex: 0 0 33.3334%;
+    }
+}
+
+@screen lg {
+  #homepage-brand-slider .slider__item {
+      flex: 0 0 25%;
+    }
+}
+
+.card__brand .overlay {
+  transition: all linear 0.25s;
+}
+
+.card__brand:hover .overlay {
+  opacity: 0.4;
+}
