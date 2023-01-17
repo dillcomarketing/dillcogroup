@@ -1,0 +1,79 @@
+.basis-full {
+    flex-basis: 100%;
+}
+.top-half {
+    top: 50%;
+}
+.-translate-y-half {
+    transform: translateY(-50%);
+}
+.aspect-one-one {
+    aspect-ratio: 1 / 1;
+}
+
+@supports not (aspect-ratio: 1 / 2) {
+    .aspect-one-one::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+    }
+
+    .aspect-one-one::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.bg-dillco-image {
+    background-image: url("/assets/images/dillco-chocolate/backdrop-page-dci.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.bg-dillco-header {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+}
+.line-up-card {
+  background-color: #FFFDE8;
+  overflow: hidden;
+  max-width: 281px;
+}
+.line-up-card .image-grafik {
+  display: block;
+}
+.line-up-card .image-product {
+  display: none;
+}
+.line-up-card:hover .image-grafik {
+  display: none;
+}
+.line-up-card:hover .image-product {
+  display: block;
+}
+
+#harvest-icon {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  translate: all 0.5s linear;
+}
+
+#harvest-button {
+  translate: all 0.5s linear;
+}
+
+#harvest-button:hover {
+  transform: rotate(180deg);
+}
+
+#harvest-button:hover ~ #harvest-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

@@ -1,4 +1,4 @@
-<ul id="social-media-navigation" role="navigation" class="flex items-center {{ $classes }}">
+<ul id="social-media-navigation" role="navigation" class="{{ $classes }}">
     <li class="hover:opacity-70 {{ $listClasses }}">
         <a href="#">
             <x-icons.linkedin size="{{ $iconSize ?? 18 }}" />
