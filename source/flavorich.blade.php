@@ -1,5 +1,6 @@
 ---
 title: Flavorich - Dillco Group
+description: Enjoy the slightly bitter taste of matcha green tea powder and full of flavor of tea in everything from drinks and bakes. Swap your regular drink or coffee with these delicious recipes tea from Dilltea.
 ---
 
 @php

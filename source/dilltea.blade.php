@@ -1,5 +1,6 @@
 ---
 title: Dilltea - Dillco Group
+description: Dillco Dilltea is a micro batch artisan tea crafter based in Bandung, West Java, Indonesia. We are fervent to introduce you more about tea world!
 ---
 
 @php
