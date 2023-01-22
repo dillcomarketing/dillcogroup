@@ -17,8 +17,8 @@ $menus = [
         <img src="{{ $productLogo }}" class="{{ $productLogoClasses ?? 'w-24 sm:w-20' }}" />
       </a>
     </li>
-    @foreach ($menus as $menu)
-    <li class="">
+    @foreach ($menus as $key => $menu)
+    <li class="flex-1 text-center border-gray-600 {{ count($menus) - 1 !== $key ? 'border-r' : 'border-r-0' }}">
       <a href="{{ $menu['link'] }}" class="block {{ $linkClasses }}" title="{{ ucwords($menu['title']) }}">
         {{ $menu['title'] }}
       </a>

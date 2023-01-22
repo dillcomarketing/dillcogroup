@@ -3,8 +3,7 @@
 $menus = [
 [ 'title' => 'home', 'link' => '/', 'active' => true ],
 [ 'title' => 'about', 'link' => '#about', 'dataTarget' => 'modal-about' ],
-[ 'title' => 'brands', 'link' => '#homepage-brand-slider' ],
-[ 'title' => 'catalog', 'link' => '#homepage-brand-slider' ],
+[ 'title' => 'brands', 'link' => '#our-brands' ],
 [ 'title' => 'contact', 'link' => '#contact' ],
 ];
 
@@ -82,8 +81,8 @@ $stores = [
 <nav role="navigation" id="header-menu" class="hidden md:block">
   <ul class="flex justify-evenly items-center p-2 border-t border-b border-gray-800 uppercase text-sm font-semibold">
     @foreach ($menus as $menu)
-    <li class="border-b-4 hover:opacity-70 hover:border-yellow-400 mx-1 {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">
-      <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}">{{ $menu['title'] }}</a>
+    <li class="hover:opacity-70 hover:border-yellow-400 text-center flex-1 border-l border-r border-gray-600">
+      <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}" class="border-b-4  {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
     </li>
     @endforeach
   </ul>
@@ -140,7 +139,7 @@ $stores = [
     </section>
 
     {{-- brand slider --}}
-    <section class="px-6 banner-slider mb-10 bg-gray-300 py-12">
+    <section class="px-6 banner-slider mb-10 bg-gray-300 py-12" id="our-brands">
       <div id="homepage-brand-slider" class="mx-auto max-w-6xl">
         <h2 class="px-4 md:px-12 text-3xl font-bold mb-10">
           <span class="border-b-4 border-yellow-400">OUR BRANDS</span>
