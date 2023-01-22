@@ -1,0 +1,55 @@
+@import 'base/fonts.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'components/embla.css';
+@import 'components/header.css';
+@import 'components/general.css';
+
+.bg-pa-fadil {
+    background-image: url('/assets/images/foto-pa-fadil.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+}
+
+body {
+  @apply text-gray-900 font-sans antialiased
+}
+
+#brands .embla__slide {
+    flex: 0 0 40%;
+}
+
+@screen sm {
+    #brands .embla__slide {
+        flex: 0 0 25%;
+    }
+}
+
+@screen lg {
+    #brands .embla__slide {
+        flex: 0 0 20%;
+    }
+}
+
+#homepage-brand-slider .embla__slide,
+#product-lineup-slider .embla__slide {
+    flex: 0 0 40%;
+}
+
+@screen sm {
+    #homepage-brand-slider .embla__slide,
+    #product-lineup-slider .embla__slide {
+        flex: 0 0 25%;
+    }
+}
+
+@screen lg {
+    #homepage-brand-slider .embla__slide,
+    #product-lineup-slider .embla__slide {
+        flex: 0 0 20%;
+    }
+}
