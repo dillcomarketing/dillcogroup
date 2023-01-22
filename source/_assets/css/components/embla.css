@@ -99,7 +99,15 @@ button.embla__nav-button:disabled svg {
   opacity: 1;
 }
 
-#homepage-banner-slider .embla__dot-selected {
+#homepage-banner-slider .embla__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: transparent;
+  border: solid 1px #a0aec0;
+}
+
+#homepage-banner-slider .embla__dot.embla__dot-selected {
   background-color: #000;
 }
 
@@ -134,3 +142,12 @@ button.embla__nav-button:disabled svg {
 .card__brand:hover .overlay {
   opacity: 0.4;
 }
+
+#best-seller-slider button.embla__nav-button svg {
+  fill: #ccc;
+}
+
+#best-seller-slider button.embla__nav-button:disabled svg {
+  fill: #000;
+}
+

@@ -16,6 +16,7 @@
 <body class="@yield('body_class')">
   @yield('body')
   @yield('scripts')
+  <x-about-dialog />
 </body>
 
 </html>

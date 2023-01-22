@@ -1,77 +1,119 @@
 import EmblaCarousel from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-function initEmbla(parentElementSelector, options) {
-    const start = options?.startIndex ?? 1;
-    const parents = document.querySelectorAll(parentElementSelector);
+function addPrevNextBtnsClickHandlers(emblaApi, prevBtn, nextBtn) {
+    const scrollPrev = () => emblaApi.scrollPrev();
+    const scrollNext = () => emblaApi.scrollNext();
+    prevBtn.addEventListener("click", scrollPrev, false);
+    nextBtn.addEventListener("click", scrollNext, false);
 
-    for (let i = 0; i < parents.length; i++) {
-        const parent = parents[i];
+    return () => {
+        prevBtn.removeEventListener("click", scrollPrev, false);
+        nextBtn.removeEventListener("click", scrollNext, false);
+    };
+}
 
-        const slideElements = parent.querySelectorAll(".embla__slide");
-        const dotButtons = parent.querySelectorAll(".embla__dot-button");
+function addTogglePrevNextBtnsActive(emblaApi, prevBtn, nextBtn) {
+    const togglePrevNextBtnsState = () => {
+        if (emblaApi.canScrollPrev()) prevBtn.removeAttribute("disabled");
+        else prevBtn.setAttribute("disabled", "disabled");
 
-        const prevButton = parent.querySelector(".embla__prev-button");
-        const nextButton = parent.querySelector(".embla__next-button");
+        if (emblaApi.canScrollNext()) nextBtn.removeAttribute("disabled");
+        else nextBtn.setAttribute("disabled", "disabled");
+    };
 
-        slideElements[start]?.classList.add("embla__slide--active");
-        dotButtons[start]?.classList.add("embla__dot-button--active");
+    emblaApi
+        .on("select", togglePrevNextBtnsState)
+        .on("init", togglePrevNextBtnsState)
+        .on("reInit", togglePrevNextBtnsState);
 
-        const plugins = [];
+    return () => {
+        prevBtn.removeAttribute("disabled");
+        nextBtn.setAttribute("disabled", "disabled");
+    };
+}
 
-        if (options?.autoPlay) {
-            plugins.push(Autoplay({ delay: 3000 }, parent));
-        }
+function addDotBtnsAndClickHandlers(emblaApi, dotsNode) {
+    let dotNodes = [];
 
-        const embla = EmblaCarousel(
-            parent,
-            {
-                startIndex: start,
-                loop: options?.loop ?? false,
-            },
-            plugins
-        );
+    const addDotBtnsWithClickHandlers = () => {
+        dotsNode.innerHTML = emblaApi
+            .scrollSnapList()
+            .map(() => '<button class="embla__dot" type="button"></button>')
+            .join("");
 
-        embla.on("select", () => {
-            let current = embla.selectedScrollSnap();
-            let previous = embla.previousScrollSnap();
-
-            slideElements[current]?.classList.add("embla__slide--active");
-            slideElements[previous]?.classList.remove("embla__slide--active");
-
-            dotButtons[current]?.classList.add("embla__dot-button--active");
-            dotButtons[previous]?.classList.remove("embla__dot-button--active");
-
-            embla.reInit();
-        });
-
-        embla.slideNodes().forEach((node) => {
-            node.addEventListener(
+        dotNodes = Array.from(dotsNode.querySelectorAll(".embla__dot"));
+        dotNodes.forEach((dotNode, index) => {
+            dotNode.addEventListener(
                 "click",
-                (e) => {
-                    e.preventDefault();
-                    if (
-                        embla.clickAllowed() &&
-                        e.currentTarget.querySelector("a")
-                    ) {
-                        window.location.href = e.currentTarget
-                            .querySelector("a")
-                            .getAttribute("href");
-                    }
-                },
+                () => emblaApi.scrollTo(index),
                 false
             );
         });
+    };
 
-        // handle next/prev button
-        prevButton?.addEventListener("click", embla.scrollPrev);
-        nextButton?.addEventListener("click", embla.scrollNext);
+    const toggleDotBtnsActive = () => {
+        const previous = emblaApi.previousScrollSnap();
+        const selected = emblaApi.selectedScrollSnap();
+        dotNodes[previous].classList.remove("embla__dot-selected");
+        dotNodes[selected].classList.add("embla__dot-selected");
+    };
 
-        // handle embla dots click
-        dotButtons.forEach((e, i) => {
-            e.addEventListener("click", () => embla.scrollTo(i));
-        });
-    }
+    emblaApi
+        .on("init", addDotBtnsWithClickHandlers)
+        .on("reInit", addDotBtnsWithClickHandlers)
+        .on("init", toggleDotBtnsActive)
+        .on("reInit", toggleDotBtnsActive)
+        .on("select", toggleDotBtnsActive);
+
+    return () => {
+        dotsNode.innerHTML = "";
+    };
 }
 
-export default initEmbla;
+function emblaInit(parentElementSelector, options) {
+    const emblaNode = document.querySelector(parentElementSelector);
+    if (!emblaNode) return;
+    const viewPortNode = emblaNode.querySelector(".embla");
+    const prevButton = emblaNode.querySelector(".embla__prev-button");
+    const nextButton = emblaNode.querySelector(".embla__next-button");
+    const dotsNode = emblaNode.querySelector(".embla-dots");
+
+    const plugins = [];
+
+    if (options?.autoPlay) {
+        plugins.push(Autoplay());
+    }
+
+    const emblaApi = EmblaCarousel(viewPortNode, options, plugins);
+    let removePrevNextButtonsClickHandler = null;
+    let removeTogglePrevNextButtonsClickHandler = null;
+    let removeDotsButtonAndClickHandler = null;
+
+    if (!!prevButton && !!nextButton) {
+        removePrevNextButtonsClickHandler = addPrevNextBtnsClickHandlers(
+            emblaApi,
+            prevButton,
+            nextButton
+        );
+        removeTogglePrevNextButtonsClickHandler = addTogglePrevNextBtnsActive(
+            emblaApi,
+            prevButton,
+            nextButton
+        );
+    }
+
+    if (!!dotsNode) {
+        removeDotsButtonAndClickHandler = addDotBtnsAndClickHandlers(
+            emblaApi,
+            dotsNode
+        );
+    }
+
+    emblaApi
+        .on("destroy", removePrevNextButtonsClickHandler)
+        .on("destroy", removeTogglePrevNextButtonsClickHandler)
+        .on("destroy", removeDotsButtonAndClickHandler);
+}
+
+export default emblaInit;

@@ -86,6 +86,27 @@ $harvests = [
 '/assets/images/dillco-chocolate/harvest-social-impact.png'
 ];
 
+$bestSellers = [
+[
+'image' => '/assets/images/dillco-chocolate/best-seller-java.png',
+'title' => 'JAVA SRAWANA',
+'subTitle' => 'THE CLASSIC SERIES',
+'description' => 'Minuman coklat siap seduh berbahan dasar SPECIALTY CHOCOLATE dari daratan JAWA yang memiliki sensasi rasa agak asam memberikan efek rasa cokelat yang light dan nutty.'
+],
+[
+'image' => '/assets/images/dillco-chocolate/best-seller-sulawesi.png',
+'title' => 'SULAWESI CELEBES',
+'subTitle' => 'THE CLASSIC SERIES',
+'description' => 'Minuman coklat siap seduh berbahan dasar SPECIALTY CHOCOLATE dari daratan SULAWESI yang memiliki sensasi rasa agak asam memberikan efek rasa cokelat yang Explicit & Vanilla-Like'
+],
+[
+'image' => '/assets/images/dillco-chocolate/best-seller-aceh.png',
+'title' => 'ACEH KUALA RAJA',
+'subTitle' => 'THE FINE CHOCO SERIES',
+'description' => 'Perpaduan nougat yang manis dan lembut memberikan rasa cokelat yang unik dengan light taste dari buah blue berry.'
+],
+]
+
 @endphp
 
 @extends('_layouts.blank')
@@ -141,6 +162,44 @@ $harvests = [
                   @endforeach
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-32 bg-dillco-header" style="background: rgba(0, 0, 0, 0.5);">
+      <div class="px-4 md:px-6 mx-auto" style="max-width: 1363px;">
+        <div class="md:flex items-center">
+          <div class="border-white border-b-4 mr-6 w-3/12 mb-6 md:mb-0" style="max-width: 290px;">
+            <h2 class="text-white text-6xl font-bold w-1/2">BEST SELLER</h2>
+          </div>
+          <div class="w-full md:w-9/12 md:flex-1">
+            <div style="--slide-size: 100%;" class="relative banner-slider mb-10" id="best-seller-slider">
+              <div class="overflow-hidden embla">
+                <div class="flex flex-row">
+                  @foreach ($bestSellers as $best)
+                  <div class="flex-shrink-0 flex-grow-0 px-6" style="flex-basis: var(--slide-size);">
+                    <div class="flex items-center">
+                      <div class="flex items-center justify-center rounded-full bg-white mr-8" style="width: 239px; height: 239px;">
+                        <img alt="{{ $best['title'] }}" src="{{ $best['image'] }}" />
+                      </div>
+                      <div class="flex-1 text-white">
+                        <p class="uppercase text-2xl mb-2 font-bold">{{ $best['subTitle'] }}</p>
+                        <h2 class="uppercase mb-2 text-5xl font-bold">{{ $best['title'] }}</h2>
+                        <p class="text-base font-bold">{{ $best['description'] }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
+                </div>
+              </div>
+              <button class="embla__prev-button embla__nav-button absolute left-0 top-half -translate-y-half outline-none focus:outline-none">
+                <x-icons.prev size="24" fill='' class="" />
+              </button>
+              <button class="embla__next-button embla__nav-button absolute right-0 top-half -translate-y-half outline-none focus:outline-none">
+                <x-icons.next size="24" fill='' />
+              </button>
+              <div class='embla-dots absolute right-50 -translate-x-1/2 hidden'></div>
             </div>
           </div>
         </div>

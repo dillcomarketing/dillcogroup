@@ -2,7 +2,7 @@
 
 $menus = [
 [ 'title' => 'home', 'link' => '/', 'active' => true ],
-[ 'title' => 'about', 'link' => '#about' ],
+[ 'title' => 'about', 'link' => '#about', 'dataTarget' => 'modal-about' ],
 [ 'title' => 'brands', 'link' => '#homepage-brand-slider' ],
 [ 'title' => 'catalog', 'link' => '#homepage-brand-slider' ],
 [ 'title' => 'contact', 'link' => '#contact' ],
@@ -83,7 +83,7 @@ $stores = [
   <ul class="flex justify-evenly items-center p-2 border-t border-b border-gray-800 uppercase text-sm font-semibold">
     @foreach ($menus as $menu)
     <li class="border-b-4 hover:opacity-70 hover:border-yellow-400 mx-1 {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">
-      <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}">{{ $menu['title'] }}</a>
+      <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}">{{ $menu['title'] }}</a>
     </li>
     @endforeach
   </ul>
