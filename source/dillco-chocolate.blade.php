@@ -1,5 +1,6 @@
 ---
 title: Dillco Chocolate - Dillco Group
+description: In the early of 2013, there was an idea of two Agriculture Students who were so passionate in Cocoa. Their curiosity drove them to start researching and developing about the big potensials that cocoa has, with the help of their lecturer who was an expert in Cocoa.
 ---
 
 @php
