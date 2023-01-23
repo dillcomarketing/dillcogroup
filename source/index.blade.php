@@ -26,12 +26,30 @@ $banners = [
 ];
 
 $brands = [
-'/assets/images/brands/brand-dci.png',
-'/assets/images/brands/brand-flavorich.png',
-'/assets/images/brands/brand-dilltea.png',
-'/assets/images/brands/brand-kopsil.png',
-'/assets/images/brands/brand-palmrich.png',
-'/assets/images/brands/brand-gmn.png'
+[
+'image' => '/assets/images/brands/brand-dci.png',
+'link' => '/dillco-chocolate/'
+],
+[
+'image' => '/assets/images/brands/brand-flavorich.png',
+'link' => '/flavorich/'
+],
+[
+'image' => '/assets/images/brands/brand-dilltea.png',
+'link' => '/dilltea/'
+],
+[
+'image' => '/assets/images/brands/brand-kopsil.png',
+'link' => '#'
+],
+[
+'image' => '/assets/images/brands/brand-palmrich.png',
+'link' => '#'
+],
+[
+'image' => '/assets/images/brands/brand-gmn.png',
+'link' => '#'
+]
 ];
 
 $stores = [
@@ -149,7 +167,7 @@ $stores = [
             <div class="flex flex-row">
               @foreach ($brands as $brand)
               <div class="slider__item">
-                <x-brand-product-card :image="$brand" />
+                <x-brand-product-card :image="$brand['image']" :link="$brand['link']" />
               </div>
               @endforeach
             </div>
