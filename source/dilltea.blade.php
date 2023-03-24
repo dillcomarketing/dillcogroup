@@ -56,7 +56,7 @@ $bestSellers = [
 @section('body')
 
 {{-- header --}}
-<x-product-header accent="dilltea" productName="Dilltea" productLogo="/assets/images/dilltea/dilltea.png" productLogoClasses="w-12 sm:w-10" />
+<x-product-header accent="dilltea" productName="Dilltea" productLogo="/assets/images/dilltea/dilltea.png" productLogoClasses="w-12 sm:w-10" iconFill='black' />
 
 {{-- main container --}}
 <main class="text-white py-4 sm">
@@ -124,7 +124,7 @@ $bestSellers = [
         <div class="flex-1">
           <h2 class="text-appdark font-bold text-2xl md:text-5xl mb-8">Recipes</h2>
           <p class="font-normal text-base md:text-3xl text-appdark mb-6">Enjoy the slightly bitter taste of matcha green tea powder and full of flavor of tea in everything from drinks and bakes. Swap your regular drink or coffee with these delicious recipes tea from Dilltea.</p>
-          <a href="#" class="w-full md:w-auto py-4 px-12 inline-flex bg-transparent border border-gray-800 rounded-3xl text-3xl text-center items-center justify-center font-bold text-appdark hover:bg-dilltea hover:text-white">More Recipe</a>
+          <a href="https://www.instagram.com/dillteapureness/reels/" target="_blank" class="w-full md:w-auto py-4 px-12 inline-flex bg-transparent border border-gray-800 rounded-3xl text-3xl text-center items-center justify-center font-bold text-appdark hover:bg-dilltea hover:text-white">More Recipe</a>
         </div>
       </div>
     </div>
@@ -132,5 +132,5 @@ $bestSellers = [
 </main>
 
 {{-- footer --}}
-<x-product-footer />
+<x-product-footer instagramLink="https://www.instagram.com/dillteapureness/" />
 @endsection

@@ -13,7 +13,7 @@
         <h2 class="text-4xl font-semibold uppercase tracking-wider">Office</h2>
         <span class="text-sm font-semibold">Jl. Yupiter Utama No. 106, Bandung 40286</span>
       </div>
-      <x-social-media-menu iconSize="32" classes="md:justify-end flex" listClasses="mr-3" />
+      <x-social-media-menu iconSize="32" classes="md:justify-end flex" listClasses="mr-3" instagramLink="{{ $instagramLink ?? 'https://www.instagram.com/dillco.group/' }}" />
     </div>
   </div>
 </footer>

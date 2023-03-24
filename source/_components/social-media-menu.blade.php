@@ -5,7 +5,7 @@
     </a>
   </li>
   <li class="hover:opacity-70 {{ $listClasses }}">
-    <a href="https://www.instagram.com/dillco.group/" target="_blank">
+    <a href="{{ $instagramLink ?? 'https://www.instagram.com/dillco.group/' }}" target="_blank">
       <x-icons.instagram size="{{ $iconSize ?? 18 }}" />
     </a>
   </li>
