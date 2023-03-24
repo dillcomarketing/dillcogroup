@@ -54,17 +54,17 @@ $brands = [
 
 $stores = [
 [
-'link' => '#',
+'link' => 'https://shopee.co.id/siliwangistore.id',
 'icon' => '/assets/images/icon/icon-shopee.png',
 'text' => 'Siliwangi Store ID'
 ],
 [
-'link' => '#',
+'link' => 'https://www.tokopedia.com/siliwangistoreid?source=universe&st=product',
 'icon' => '/assets/images/icon/icon-tokopedia.png',
 'text' => 'Siliwangi Store ID'
 ],
 [
-'link' => '#',
+'link' => 'https://www.tiktok.com/@siliwangistoreid',
 'icon' => '/assets/images/icon/icon-tiktok.png',
 'text' => 'Siliwangi Store ID'
 ]
@@ -100,7 +100,11 @@ $stores = [
   <ul class="flex justify-evenly items-center p-2 border-t border-b border-gray-800 uppercase text-sm font-semibold">
     @foreach ($menus as $menu)
     <li class="hover:opacity-70 hover:border-yellow-400 text-center flex-1 border-l border-r border-gray-600">
-      <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}" class="border-b-4  {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
+      @if (isset($menu['dataTarget']))
+        <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}" class="border-b-4  {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
+      @else
+        <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" class="border-b-4  {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
+      @endif
     </li>
     @endforeach
   </ul>

@@ -90,7 +90,7 @@ $syrupsLineups = [
 @extends('_layouts.blank')
 
 @section('body')
-<x-product-header accent="flavorich" productName="Flavorich" headerClasses="bg-flavorich100 opacity-90 sticky top-0 z-10" linkClasses="text-white" productLogo=" /assets/images/flavorich/flavorich-white.png" />
+<x-product-header accent="flavorich" productName="Flavorich" headerClasses="bg-flavorich100 opacity-90 sticky top-0 z-10" linkClasses="text-white" productLogo=" /assets/images/flavorich/flavorich-white.png" iconFill="white" />
 
 <main class="bg-flavorich text-white py-4 sm">
 
@@ -201,7 +201,7 @@ $syrupsLineups = [
         <div class="flex-1">
           <h2 class="text-white font-bold text-2xl md:text-5xl mb-8">Recipes</h2>
           <p class="font-normal text-base md:text-3xl text-white mb-6">Enjoy the slightly bitter taste of matcha green tea powder and full of flavor of tea in everything from drinks and bakes. Swap your regular drink or coffee with these delicious recipes tea from Dilltea.</p>
-          <a href="#" class="w-full md:w-auto py-4 px-12 inline-flex bg-transparent border border-white rounded-3xl text-3xl text-center items-center justify-center font-bold text-white hover:text-white">More Recipe</a>
+          <a href="https://www.instagram.com/flavorich.id/reels/" target="_blank" class="w-full md:w-auto py-4 px-12 inline-flex bg-transparent border border-white rounded-3xl text-3xl text-center items-center justify-center font-bold text-white hover:text-white">More Recipe</a>
         </div>
       </div>
     </div>
@@ -209,5 +209,5 @@ $syrupsLineups = [
 </main>
 
 {{-- footer --}}
-<x-product-footer />
+<x-product-footer instagramLink="https://www.instagram.com/flavorich.id/" />
 @endsection

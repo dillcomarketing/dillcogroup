@@ -12,8 +12,8 @@
           <p class="text-center text-white text-base mb-6">
             Dillco Group adalah solusi bisnis terintegrasi yang menawarkan kebutuhan bahan baku untuk kafe, restoran, hotel, hingga rumah yang berpusat di Kota Bandung.
           </p>
-          <a href="#" class="w-full max-w-sm bg-transparent py-1 px-6 border border-white uppercase text-white text-center font-bold mb-3" style="border-radius: 38px;">DOWNLOAD COMPANY PROFILE</a>
-          <a href="#" class="w-full max-w-sm bg-transparent py-1 px-6 border border-white uppercase text-white text-center font-bold" style="border-radius: 38px;">DOWNLOAD CATALOG</a>
+          <a href="https://drive.google.com/file/d/12EPtHZkVw2ObrunlHJ4hS3CGvK7JlEab/view?usp=sharing" target="_blank" class="w-full max-w-sm bg-transparent py-1 px-6 border border-white uppercase text-white text-center font-bold mb-3" style="border-radius: 38px;">DOWNLOAD COMPANY PROFILE</a>
+          <a href="https://cdn.me-qr.com/pdf/8072136.pdf" target="_blank" class="w-full max-w-sm bg-transparent py-1 px-6 border border-white uppercase text-white text-center font-bold" style="border-radius: 38px;">DOWNLOAD CATALOG</a>
         </div>
       </div>
     </div>

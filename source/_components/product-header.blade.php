@@ -3,8 +3,8 @@
 $menus = [
 [ 'title' => 'home', 'link' => '/', 'active' => true ],
 [ 'title' => 'about', 'link' => '#about', 'dataTarget' => 'modal-about' ],
-[ 'title' => 'catalog', 'link' => '#best-seller' ],
-[ 'title' => 'contact', 'link' => '#contact' ],
+[ 'title' => 'catalog', 'link' => 'https://cdn.me-qr.com/pdf/8072136.pdf' ],
+[ 'title' => 'contact', 'link' => '/#contact' ],
 ];
 
 @endphp
@@ -19,9 +19,15 @@ $menus = [
     </li>
     @foreach ($menus as $key => $menu)
     <li class="flex-1 text-center border-gray-600 {{ count($menus) - 1 !== $key ? 'border-r' : 'border-r-0' }}">
-      <a href="{{ $menu['link'] }}" class="block {{ $linkClasses }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}">
-        {{ $menu['title'] }}
-      </a>
+        @if (isset($menu['dataTarget']))
+            <a href="{{ $menu['link'] }}" class="block {{ $linkClasses }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}">
+                {{ $menu['title'] }}
+            </a>
+        @else
+            <a href="{{ $menu['link'] }}" class="block {{ $linkClasses }}" title="{{ ucwords($menu['title']) }}">
+                {{ $menu['title'] }}
+            </a>
+        @endif
     </li>
     @endforeach
     <li class="border-b-2 border-transparent hover:opacity-70">
