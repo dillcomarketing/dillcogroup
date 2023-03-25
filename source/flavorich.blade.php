@@ -131,17 +131,17 @@ $syrupsLineups = [
   </section>
 
   {{-- lineup slider --}}
-  <section class="py-6 overflow-hidden border-t border-b border-white">
+  <section class="py-10 overflow-hidden border-t border-b border-white">
     <div class="mx-auto px-6 md:pr-6" style="max-width: 1834px;">
-      <div class="md:flex" style="width: 120%;">
-        <h2 class="text-uppercase font-bold text-2xl md:text-5xl md:w-64 mb-4">PREMIUM PUREE SYRUP</h2>
+      <div class="md:flex items-center" style="width: 120%;">
+        <h2 class="text-uppercase font-bold text-2xl md:text-5xl md:w-72 md:mr-16 mb-4 flex-shrink-0">PREMIUM PUREE SYRUP</h2>
         <div id="test-lineups" class="md:pl-6">
           <div class="relative">
             <div class="embla">
               <div class="flex flex-row">
                 @foreach ($syrupsLineups as $lineup)
                 <div class="pl-4 flex-grow-0 flex-shrink-0" style="flex-basis: 288px;">
-                  <div class="py-1 bg-yellow-300 rounded-lg flex items-center justify-center">
+                  <div class="py-1 bg-yellow-300 rounded-3xl flex items-center justify-center">
                     <img src="{{ $lineup }}" alt="" class="w-full h-auto" />
                   </div>
                 </div>
@@ -159,17 +159,17 @@ $syrupsLineups = [
       </div>
     </div>
   </section>
-  <section class="py-6 overflow-hidden border-t border-b border-white">
+  <section class="py-10 overflow-hidden border-t border-b border-white">
     <div class="mx-auto px-6 md:pr-6" style="max-width: 1834px;">
-      <div class="md:flex" style="width: 120%;">
-        <h2 class="text-uppercase font-bold text-2xl md:text-5xl md:w-64 mb-4">PREMIUM PUREE SYRUP</h2>
+      <div class="md:flex items-center" style="width: 120%;">
+        <h2 class="text-uppercase font-bold text-2xl md:text-5xl md:w-72 md:mr-16 mb-4 flex-shrink-0">PREMIUM BEVERAGES POWDER</h2>
         <div id="premium-beverages-powder" class="md:pl-6">
           <div class="relative">
             <div class="embla">
               <div class="flex flex-row">
                 @foreach ($syrupsLineups as $lineup)
                 <div class="pl-4 flex-grow-0 flex-shrink-0" style="flex-basis: 288px;">
-                  <div class="py-1 bg-yellow-300 rounded-lg flex items-center justify-center">
+                  <div class="py-1 bg-yellow-300 rounded-3xl flex items-center justify-center">
                     <img src="{{ $lineup }}" alt="" class="w-full h-auto" />
                   </div>
                 </div>
