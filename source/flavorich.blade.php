@@ -82,8 +82,27 @@ $syrupsLineups = [
 '/assets/images/flavorich/lineup-syrup6.png',
 '/assets/images/flavorich/lineup-syrup7.png',
 '/assets/images/flavorich/lineup-syrup8.png',
-'/assets/images/flavorich/lineup-syrup9.png'
-]
+'/assets/images/flavorich/lineup-syrup9.png',
+'/assets/images/flavorich/lineup-syrup10.png'
+];
+
+$beveragesLineups = [
+'/assets/images/flavorich/lineup-beverage1.png',
+'/assets/images/flavorich/lineup-beverage2.png',
+'/assets/images/flavorich/lineup-beverage3.png',
+'/assets/images/flavorich/lineup-beverage4.png',
+'/assets/images/flavorich/lineup-beverage5.png',
+'/assets/images/flavorich/lineup-beverage6.png',
+'/assets/images/flavorich/lineup-beverage7.png',
+'/assets/images/flavorich/lineup-beverage8.png',
+'/assets/images/flavorich/lineup-beverage9.png',
+'/assets/images/flavorich/lineup-beverage10.png',
+'/assets/images/flavorich/lineup-beverage11.png',
+'/assets/images/flavorich/lineup-beverage12.png',
+'/assets/images/flavorich/lineup-beverage13.png',
+'/assets/images/flavorich/lineup-beverage14.png',
+'/assets/images/flavorich/lineup-beverage15.png'
+];
 
 @endphp
 
@@ -167,7 +186,7 @@ $syrupsLineups = [
           <div class="relative">
             <div class="embla">
               <div class="flex flex-row">
-                @foreach ($syrupsLineups as $lineup)
+                @foreach ($beveragesLineups as $lineup)
                 <div class="pl-4 flex-grow-0 flex-shrink-0" style="flex-basis: 288px;">
                   <div class="py-1 bg-yellow-300 rounded-3xl flex items-center justify-center">
                     <img src="{{ $lineup }}" alt="" class="w-full h-auto" />
