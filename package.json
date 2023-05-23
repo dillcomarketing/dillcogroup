@@ -5,7 +5,7 @@
     "watch": "mix watch",
     "staging": "NODE_ENV=staging mix",
     "prod": "mix --production",
-    "deploy": "mix --production && netlify deploy --prod --dir=build_production --site=52c40a85-9391-449e-a924-abade7daac8c"
+    "deploy": "mix --production && netlify deploy --prod --dir=build_production --site=48a7d6cc-dfb1-4bdf-b9c5-8e458a860a88"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
