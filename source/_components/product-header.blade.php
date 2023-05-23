@@ -9,7 +9,7 @@ $menus = [
 
 @endphp
 
-<header class="py-5 px-4 lg:px-8 {{ $headerClasses }}">
+<header class="py-5 px-4 lg:px-8 {{ $headerClasses ?? '' }}">
   <ul role="navigation" class="flex flex-wrap items-center justify-between uppercase text-sm font-semibold">
     <li class="w-full sm:w-auto flex sm:block flex-col items-center mb-6 sm:mb-0">
       <a href="#" class="inline-block" title="{{ $productName }}">
@@ -20,11 +20,11 @@ $menus = [
     @foreach ($menus as $key => $menu)
     <li class="flex-1 text-center border-gray-600 {{ count($menus) - 1 !== $key ? 'border-r' : 'border-r-0' }}">
         @if (isset($menu['dataTarget']))
-            <a href="{{ $menu['link'] }}" class="block {{ $linkClasses }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}">
+            <a href="{{ $menu['link'] }}" class="block {{ $linkClasses ?? '' }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}">
                 {{ $menu['title'] }}
             </a>
         @else
-            <a href="{{ $menu['link'] }}" class="block {{ $linkClasses }}" title="{{ ucwords($menu['title']) }}">
+            <a href="{{ $menu['link'] }}" class="block {{ $linkClasses ?? '' }}" title="{{ ucwords($menu['title']) }}">
                 {{ $menu['title'] }}
             </a>
         @endif

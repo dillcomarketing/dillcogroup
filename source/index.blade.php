@@ -101,9 +101,9 @@ $stores = [
     @foreach ($menus as $menu)
     <li class="hover:opacity-70 hover:border-yellow-400 text-center flex-1 border-l border-r border-gray-600">
       @if (isset($menu['dataTarget']))
-        <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}" class="border-b-4  {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
+        <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" data-modal="{{ $menu['dataTarget'] }}" class="border-b-4  {{ ($menu['active'] ?? 'false') ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
       @else
-        <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" class="border-b-4  {{ $menu['active'] ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
+        <a href="{{ $menu['link'] }}" title="{{ ucwords($menu['title']) }}" class="border-b-4  {{ ($menu['active'] ?? 'false') ? 'border-yellow-400' : 'border-transparent' }}">{{ $menu['title'] }}</a>
       @endif
     </li>
     @endforeach
